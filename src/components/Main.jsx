@@ -1,5 +1,12 @@
 import styled from 'styled-components';
+
+import { COLORS } from '../constants';
+import About from './About';
+import ServiceSection from './ServiceSection';
+
 import djSVG from '../assets/dj_man.svg';
+import weddingPic from '../assets/wedding.jpg';
+import partyPic from '../assets/party.jpg';
 
 const Main = () => {
   return (
@@ -11,22 +18,34 @@ const Main = () => {
       </BigLogoCont>
 
       <Section>
-        <AboutWrapper>
-          <Card>
-            <TextContainer>
-              <h2>Üdvözöllek a zene világomban!</h2>
-              <p>
-                DJ-ként az a szenvedélyem, hogy visszahozzam a zene aranykorát. Legyen szó a 70-es évek funky
-                hangulatáról, a 80-as évek ikonikus ritmusairól, vagy a 90-es évek felejthetetlen slágereiről. Célom,
-                hogy minden eseményt nosztalgikus időutazássá varázsoljak. A kortalan retro klasszikusoktól a kedvenc
-                modern slágerekig mindent megoldok.
-              </p>
-            </TextContainer>
-          </Card>
-        </AboutWrapper>
+        <About />
       </Section>
-      <ServicesWrapper></ServicesWrapper>
-      <Section></Section>
+
+      <ServiceSection imageSource={weddingPic} cardSize={'large'} cardText={'Esküvőre'} direction={'row'}>
+        <h3>A felejthetetlen pillanatokért</h3>
+        <br />
+        <p>
+          A Dj Tatamoto-nál a kivételes zene és szórakoztatás biztosítására specializálódtam, kifejezetten kisebb
+          esküvők számára. Jól tudom, milyen fontos a tökéletes hangulat megteremtése a különleges napotokhoz. A
+          tervezésben szorosan együttműködök veletek, hogy egyedi stílusotok és preferenciáitokat tükröző lejátszási
+          listát állítsak össze, ezzel biztosítva, hogy esküvőtök emlékezetes és szórakoztató legyen Nektek, és minden
+          vendég számára. Ünnepeljük együtt a szerelmet a tökéletes zenei aláfestéssel!
+        </p>
+      </ServiceSection>
+
+      <ServiceSection imageSource={partyPic} cardSize={'large'} cardText={'Rendezvényre'} direction={'reverse'}>
+        <h3>Hogy nagyot szóljon a buli</h3>
+        <br />
+        <p>
+          A DJ Tatamoto-nál a különleges zene és felejthetetlen hangulat megteremtésére specializálódtam, legyen szó
+          szilveszteri buliról, születésnapról vagy céges eseményről. Fontos számomra, hogy az est minden pillanata
+          emlékezetes legyen. Együtt dolgozva alakítjuk ki a zenei programot, amely teljes mértékben tükrözi az
+          elképzeléseiteket és az esemény jellegét. Garantálom, hogy a vendégek jól szórakoznak, és a buli valóban
+          különleges élménnyé válik. Ünnepeljünk együtt a legjobb dallamokkal és fantasztikus energiával!
+        </p>
+      </ServiceSection>
+
+      <Services></Services>
     </MainWrapper>
   );
 };
@@ -39,7 +58,9 @@ const BigLogoCont = styled.section`
 
 const Section = styled.div``;
 
-const MainWrapper = styled.main``;
+const MainWrapper = styled.main`
+  padding-bottom: 32px;
+`;
 
 const ImageContainer = styled.div`
   width: 60%;
@@ -50,31 +71,10 @@ const ImageContainer = styled.div`
   }
 `;
 
-const AboutWrapper = styled.article`
-  background: hsl(36 58% 20%);
-  display: flex;
-  justify-content: center;
-  padding: 26px;
-  padding-top: 150px;
-  margin-top: calc(-15rem);
-`;
-
-const Card = styled.div`
-  width: clamp(500px, 70%, 900px);
-`;
-
-const TextContainer = styled.div`
-  font-size: 18px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  text-align: justify;
-`;
-
-const ServicesWrapper = styled.div`
-  height: 300px;
+const Services = styled.section`
+  min-height: 300px;
+  background: ${COLORS.secondary};
+  padding: 32px;
 `;
 
 export default Main;
