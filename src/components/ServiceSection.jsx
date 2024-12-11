@@ -20,7 +20,7 @@ const ServiceSection = ({ imageSource, svgSource, cardSize, cardText, children, 
 const Wrapper = styled.div`
   min-height: 300px;
   background: ${COLORS.secondary};
-  padding-top: 72px;
+  // padding-top: 72px;
   padding-right: 32px;
   padding-left: 32px;
   display: flex;
@@ -28,6 +28,10 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   gap: 32px;
+
+  &:first-of-type {
+    padding-top: 72px;
+  }
 `;
 
 const ChildWrapper = styled.div`
