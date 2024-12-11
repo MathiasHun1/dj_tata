@@ -80,11 +80,11 @@ body {
 }
 
 #root {
-  max-width: 1300px;
+  // max-width: 1300px;
   min-height: 100%;
-  background: white;
-  margin: 0 auto;
-  text-wrap: pretty;
-  text-align: justify;
+  // background: white;
+  // margin: 0 auto;
+  // text-wrap: pretty;
+  // text-align: justify;
 }
 `;

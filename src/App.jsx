@@ -13,4 +13,7 @@ function App() {
 
 export default App;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  max-width: 1700px;
+  margin: 0 auto;
+`;

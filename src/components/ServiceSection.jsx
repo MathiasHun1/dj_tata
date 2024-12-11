@@ -5,7 +5,6 @@ import Card from './Card';
 
 const ServiceSection = ({ imageSource, svgSource, cardSize, cardText, children, direction }) => {
   let directionProp = direction === null || direction === 'row' ? 'row' : 'row-reverse';
-  console.log(directionProp);
 
   return (
     <Wrapper style={{ '--wrap-direction': directionProp }}>
@@ -21,7 +20,9 @@ const ServiceSection = ({ imageSource, svgSource, cardSize, cardText, children, 
 const Wrapper = styled.div`
   min-height: 300px;
   background: ${COLORS.secondary};
-  padding: 32px 32px;
+  padding-top: 72px;
+  padding-right: 32px;
+  padding-left: 32px;
   display: flex;
   flex-direction: var(--wrap-direction);
   justify-content: center;

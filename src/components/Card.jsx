@@ -24,7 +24,7 @@ const Card = ({ imageSource, text, size, imgSize }) => {
         <Caption>
           <CaptionText>{text}</CaptionText>
         </Caption>
-        <img src={imageSource} alt="" style={{ width: imgWidth }} />
+        <Image src={imageSource} alt="" style={{ width: imgWidth }} />
       </ImageWrapper>
     </Wrapper>
   );
@@ -40,6 +40,9 @@ const ImageWrapper = styled.div`
   position: relative;
   width: var(--width);
   height: var(--height);
+`;
+
+const Image = styled.img`
   border-radius: 4px;
 `;
 

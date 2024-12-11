@@ -23,9 +23,9 @@ const Header = () => {
 };
 
 const MainHeader = styled.div`
+  background: hsl(250 25% 95%);
   display: flex;
   align-items: center;
-  background: hsl(250 25% 95%);
   padding: 12px 24px;
 `;
 
