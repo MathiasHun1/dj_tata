@@ -20,10 +20,10 @@ const Card = ({ imageSource, text, size, imgSize }) => {
 
   return (
     <Wrapper style={styles}>
-      <Caption>
-        <CaptionText>{text}</CaptionText>
-      </Caption>
       <ImageWrapper style={{ '--height': styles['--height'] }}>
+        <Caption>
+          <CaptionText>{text}</CaptionText>
+        </Caption>
         <img src={imageSource} alt="" style={{ width: imgWidth }} />
       </ImageWrapper>
     </Wrapper>
@@ -31,12 +31,13 @@ const Card = ({ imageSource, text, size, imgSize }) => {
 };
 
 const Wrapper = styled.figure`
-  position: relative;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
 `;
 
 const ImageWrapper = styled.div`
-  overflow: hidden;
+  position: relative;
   width: var(--width);
   height: var(--height);
   border-radius: 4px;
@@ -47,7 +48,8 @@ const Caption = styled.figcaption`
   color: black;
   background: yellow;
   padding: 2px 6px;
-  transform: skew(20deg) translatex(-10px);
+  left: 0;
+  transform: skew(20deg) translateX(-10px) translateY(-10px);
 `;
 
 const CaptionText = styled.p`

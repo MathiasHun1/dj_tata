@@ -7,6 +7,8 @@ import ServiceSection from './ServiceSection';
 import djSVG from '../assets/dj_man.svg';
 import weddingPic from '../assets/wedding.jpg';
 import partyPic from '../assets/party.jpg';
+import heartSVG from '../assets/hearts.svg';
+import partySVG from '../assets/party.svg';
 
 const Main = () => {
   return (
@@ -16,12 +18,15 @@ const Main = () => {
           <img src={djSVG} alt="" />
         </ImageContainer>
       </BigLogoCont>
-
       <Section>
         <About />
       </Section>
-
-      <ServiceSection imageSource={weddingPic} cardSize={'large'} cardText={'Esküvőre'} direction={'row'}>
+      <ServiceSection
+        imageSource={weddingPic}
+        svgSource={heartSVG}
+        cardSize={'large'}
+        cardText={'Esküvőre'}
+        direction={'row'}>
         <h3>A felejthetetlen pillanatokért</h3>
         <br />
         <p>
@@ -32,8 +37,12 @@ const Main = () => {
           vendég számára. Ünnepeljük együtt a szerelmet a tökéletes zenei aláfestéssel!
         </p>
       </ServiceSection>
-
-      <ServiceSection imageSource={partyPic} cardSize={'large'} cardText={'Rendezvényre'} direction={'reverse'}>
+      <ServiceSection
+        imageSource={partyPic}
+        svgSource={partySVG}
+        cardSize={'large'}
+        cardText={'Rendezvényre'}
+        direction={'reverse'}>
         <h3>Hogy nagyot szóljon a buli</h3>
         <br />
         <p>
@@ -44,7 +53,6 @@ const Main = () => {
           különleges élménnyé válik. Ünnepeljünk együtt a legjobb dallamokkal és fantasztikus energiával!
         </p>
       </ServiceSection>
-
       <Services></Services>
     </MainWrapper>
   );
