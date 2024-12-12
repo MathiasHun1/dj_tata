@@ -96,4 +96,9 @@ body {
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 50, 'opsz' -20;
   font-size: 1.25rem;
   }
+
+.hidden {
+  transform: translateY(-100px);
+  opacity: 0;
+}
 `;
