@@ -1,42 +1,53 @@
 import styled from 'styled-components';
 
-const NavLink = ({ children }) => {
+const NavLink = ({ children, ...delegated }) => {
   return (
-    <Wrapper>
+    <Wrapper {...delegated}>
       <MainText>{children}</MainText>
       <HoverText>{children}</HoverText>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   position: relative;
   color: black;
-  // font-weight: 500;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 1.125rem;
+  color: black;
   z-index: 10;
-  // overflow: hidden;
+
   &:hover {
     cursor: pointer;
   }
 `;
 
-const Text = styled.a`
+const Text = styled.p`
+  text-transform: uppercase;
+  font-weight: bold;
   display: block;
-  text-decoration: none;
-  font-size: 1.125rem;
-  color: black;
+  width: 100%;
+  height: 100%;
 `;
 
 const MainText = styled(Text)`
-  &:hover {
+  ${Wrapper}:hover & {
     transform: translateY(-100%);
+
+    transition: transform 500ms;
   }
 `;
 
 const HoverText = styled(Text)`
-  font-weight: bold;
   position: absolute;
   bottom: -100%;
+
+  ${Wrapper}:hover & {
+    transform: translateY(-100%);
+
+    transition: transform 500ms;
+  }
 `;
 
 export default NavLink;

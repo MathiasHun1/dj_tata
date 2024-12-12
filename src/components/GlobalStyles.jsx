@@ -80,6 +80,7 @@ html {
 }
 
 body {
+ position: relative;
   background: black;
 }
 
@@ -99,6 +100,5 @@ body {
 
 .hidden {
   transform: translateY(-100px);
-  opacity: 0;
 }
 `;

@@ -6,8 +6,9 @@ import Services from './Services';
 import BigLogo from './BigLogo';
 import Accesories from './Accesories';
 import Contacts from './Contacts';
+import MobileMenu from './MobileMenu';
 
-const Main = () => {
+const Main = ({ showMobileMenu, setShowMobile }) => {
   return (
     <MainWrapper>
       <BigLogo />
@@ -19,6 +20,7 @@ const Main = () => {
       <Accesories />
 
       <Contacts />
+      <MobileMenu isOpen={showMobileMenu} setShowMobile={setShowMobile} />
     </MainWrapper>
   );
 };
@@ -26,6 +28,7 @@ const Main = () => {
 const MainWrapper = styled.main`
   padding-bottom: 32px;
   background: ${COLORS.secondary};
+  position: relative;
 `;
 
 export default Main;
