@@ -75,6 +75,10 @@ html, body, #root {
   font-family: sans-serif
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: black;
 }
@@ -85,6 +89,11 @@ body {
   // background: white;
   // margin: 0 auto;
   // text-wrap: pretty;
-  // text-align: justify;
+  text-align: justify;
 }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 50, 'opsz' -20;
+  font-size: 1.25rem;
+  }
 `;

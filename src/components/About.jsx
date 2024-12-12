@@ -3,7 +3,7 @@ import { COLORS } from '../constants';
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Card>
         <TextContainer>
           <h2>Üdvözöllek a zenei világomban!</h2>

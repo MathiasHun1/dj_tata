@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: var(--wrap-direction);
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 32px;
 
   &:first-of-type {

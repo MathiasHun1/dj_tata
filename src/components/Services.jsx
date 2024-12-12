@@ -3,13 +3,13 @@ import ServiceSection from './ServiceSection';
 import weddingPic from '../assets/wedding.jpg';
 import partyPic from '../assets/party.jpg';
 import heartSVG from '../assets/hearts.svg';
-import partySVG from '../assets/party.svg';
+import partySVG from '../assets/party2.svg';
 import styled from 'styled-components';
 import { COLORS } from '../constants';
 
 const Services = () => {
   return (
-    <>
+    <Wrapper id="services">
       <ServiceSection
         imageSource={weddingPic}
         svgSource={heartSVG}
@@ -45,7 +45,7 @@ const Services = () => {
           különleges élménnyé válik. Ünnepeljünk együtt a legjobb dallamokkal és fantasztikus energiával!
         </p>
       </ServiceSection>
-    </>
+    </Wrapper>
   );
 };
 
@@ -55,6 +55,12 @@ const Separator = styled.div`
   background: ${COLORS.primary};
   margin: 48px auto;
   border-radius: 50%;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default Services;

@@ -10,10 +10,10 @@ const Header = () => {
         </Side>
         <Side>
           <Navigation>
-            <NavLink href="">Rólam</NavLink>
-            <NavLink href="">Szolgáltatásaim</NavLink>
-            <NavLink href="">Technika</NavLink>
-            <NavLink href="">Kapcsolat</NavLink>
+            <NavLink href="#about">Rólam</NavLink>
+            <NavLink href="#services">Szolgáltatásaim</NavLink>
+            <NavLink href="#accesories">Technika</NavLink>
+            <NavLink href="#contacts">Kapcsolat</NavLink>
           </Navigation>
         </Side>
         <Spacer />
@@ -48,6 +48,11 @@ const NavLink = styled.a`
   text-decoration: none;
   color: black;
   font-weight: 500;
+  z-index: 10;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Side = styled.div`
