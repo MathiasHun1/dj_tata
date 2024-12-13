@@ -5,7 +5,7 @@ const Accesories = () => {
   return (
     <Container id="accesories">
       <h3>TECHNIKA</h3>
-      <p>Fejlesztés alatt...</p>
+      <p>Feltöltés alatt...</p>
     </Container>
   );
 };

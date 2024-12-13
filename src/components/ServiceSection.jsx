@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from '../constants';
+import { COLORS, QUERIES } from '../constants';
 import Card from './Card';
 // import partyPic from '../assets/party3.jpg';
 
@@ -28,25 +28,30 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 32px;
+  margin-bottom: 48px;
 
   &:first-of-type {
     padding-top: 72px;
+  }
+
+  @media (${QUERIES.phoneAndSmaller}) {
+    flex-direction: column;
   }
 `;
 
 const ChildWrapper = styled.div`
   max-width: 380px;
   flex: 1;
-
-  & h3 {
-    text-align: center;
-  }
 `;
 
 const SvgImage = styled.img`
   width: 300px;
   align-self: center;
   flex: 1;
+
+  @media (${QUERIES.tabletAndSmaller}) {
+    display: none;
+  }
 `;
 
 export default ServiceSection;

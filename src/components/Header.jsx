@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { QUERIES } from '../constants';
 import { useEffect, useState } from 'react';
+import 'material-symbols';
 
 import NavLink from './NavLink';
 
@@ -41,7 +42,9 @@ const Header = ({ setShowMobile }) => {
         </Navigation>
       </Side>
       <Spacer />
-      <MobileButton onClick={() => setShowMobile(true)}>BTN</MobileButton>
+      <MobileButton onClick={() => setShowMobile(true)}>
+        <span className="material-symbols-outlined menu-icon">menu</span>
+      </MobileButton>
     </MainHeader>
   );
 };
@@ -91,6 +94,14 @@ const Spacer = styled.div`
   }
 `;
 
-const MobileButton = styled.button``;
+const MobileButton = styled.button`
+  padding: 0;
+  border: 4px soild;
+  display: none;
+
+  @media (${QUERIES.tabletAndSmaller}) {
+    display: block;
+  }
+`;
 
 export default Header;

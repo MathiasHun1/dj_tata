@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { QUERIES } from '../constants';
 
 export const Globalstyle = createGlobalStyle`
   /* 1. Use a more-intuitive box-sizing model */
@@ -85,20 +86,25 @@ body {
 }
 
 #root {
-  // max-width: 1300px;
   min-height: 100%;
-  // background: white;
-  // margin: 0 auto;
-  // text-wrap: pretty;
   text-align: justify;
+
+  @media (${QUERIES.phoneAndSmaller}) {
+  text-align: start;
+  }
+}
+
+.hidden {
+  transform: translateY(-100px);
 }
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 50, 'opsz' -20;
   font-size: 1.25rem;
-  }
+}
 
-.hidden {
-  transform: translateY(-100px);
+.menu-icon {
+display: block;
+   font-size: 1.75rem;
 }
 `;

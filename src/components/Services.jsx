@@ -5,7 +5,7 @@ import partyPic from '../assets/party.jpg';
 import heartSVG from '../assets/hearts.svg';
 import partySVG from '../assets/party2.svg';
 import styled from 'styled-components';
-import { COLORS } from '../constants';
+import { COLORS, QUERIES } from '../constants';
 
 const Services = () => {
   return (
@@ -16,7 +16,7 @@ const Services = () => {
         cardSize={'large'}
         cardText={'Esküvőre'}
         direction={'row'}>
-        <h3>A felejthetetlen pillanatokért</h3>
+        <Title>A felejthetetlen pillanatokért</Title>
         <br />
         <p>
           A Dj Tatamoto-nál a kivételes zene és szórakoztatás biztosítására specializálódtam, kifejezetten kisebb
@@ -35,7 +35,7 @@ const Services = () => {
         cardSize={'large'}
         cardText={'Rendezvényre'}
         direction={'reverse'}>
-        <h3>Hogy nagyot szóljon a buli</h3>
+        <Title>Hogy nagyot szóljon a buli</Title>
         <br />
         <p>
           A DJ Tatamoto-nál a különleges zene és felejthetetlen hangulat megteremtésére specializálódtam, legyen szó
@@ -54,6 +54,7 @@ const Separator = styled.div`
   height: 4px;
   background: ${COLORS.primary};
   margin: 48px auto;
+  margin-top: 0;
   border-radius: 50%;
 `;
 
@@ -61,6 +62,14 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const Title = styled.h3`
+  text-align: center;
+
+  @media (${QUERIES.phoneAndSmaller}) {
+    text-align: start;
+  }
 `;
 
 export default Services;

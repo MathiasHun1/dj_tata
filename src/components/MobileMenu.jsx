@@ -1,22 +1,27 @@
 import styled from 'styled-components';
+import 'material-symbols';
 
 const MobileMenu = ({ isOpen, setShowMobile }) => {
-  // if (!isOpen) {
-  //   return null;
-  // }
-
   return (
     <Overlay isOpen={isOpen}>
       <CustomButton onClick={() => setShowMobile(false)}>
-        <Wrapper>BUTTON</Wrapper>
+        <span className="material-symbols-outlined menu-icon">close</span>
       </CustomButton>
       <Content>
         <Navigation>
           <LinkWrapper>
-            <a href="#about">Rólam</a>
-            <a href="#services">Szolgáltatások</a>
-            <a href="#accesories">Techinka</a>
-            <a href="#contacts">Kapcsolat</a>
+            <a href="#about" onClick={() => setShowMobile(false)}>
+              Rólam
+            </a>
+            <a href="#services" onClick={() => setShowMobile(false)}>
+              Szolgáltatások
+            </a>
+            <a href="#accesories" onClick={() => setShowMobile(false)}>
+              Techinka
+            </a>
+            <a href="#contacts" onClick={() => setShowMobile(false)}>
+              Kapcsolat
+            </a>
           </LinkWrapper>
         </Navigation>
       </Content>
@@ -31,7 +36,7 @@ const Overlay = styled.div`
   width: 70%;
   height: 120vh;
   z-index: 4000;
-  background: white;
+  background: hsl(0 0 100);
 
   display: flex;
   justify-content: center;
@@ -44,14 +49,13 @@ const Content = styled.div`
   width: 400px;
 `;
 
-const Wrapper = styled.div`
-  width: min-content;
-`;
-
 const CustomButton = styled.button`
   position: absolute;
-  right: 0;
-  top: 0;
+  top: 16px;
+  right: 26px;
+  padding: 0;
+  background: white;
+  border: 0;
 `;
 
 const Navigation = styled.nav`
@@ -75,6 +79,7 @@ const LinkWrapper = styled.div`
   height: 65vh;
   display: flex;
   flex-direction: column;
+  margin-top: -120px;
   // justify-content: space-around;
 `;
 

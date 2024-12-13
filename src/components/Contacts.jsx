@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from '../constants';
+import { COLORS, QUERIES } from '../constants';
 import 'material-symbols';
 
 const Contacts = () => {
@@ -42,6 +42,11 @@ const Container = styled.div`
   background: ${COLORS.secondary};
   padding: 32px;
   padding-top: 48px;
+
+  @media (${QUERIES.phoneAndSmaller}) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const ContactCard = styled.div`
